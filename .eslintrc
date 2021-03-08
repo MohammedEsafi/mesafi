@@ -15,6 +15,21 @@
 	"plugins": ["prettier"],
 	"rules": {
 		"prettier/prettier": "error",
-		"react/jsx-filename-extension": "off"
+		"react/jsx-filename-extension": "off",
+		"import/prefer-default-export": "off",
+		"react/forbid-prop-types": "off",
+		"import/named": "off",
+		"no-console": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"alias": [
+				["@components", "./src/components"],
+				["@styles", "./src/styles"],
+				["@utils", "./src/utils"],
+				["@hooks", "./src/hooks"],
+				["@config", "./src/config"]
+			]
+		}
 	}
 }
