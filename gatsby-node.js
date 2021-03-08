@@ -1,7 +1,17 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({ actions }) => {
+	actions.setWebpackConfig({
+		resolve: {
+			alias: {
+				'@components': path.join(__dirname, 'src', 'components'),
+				'@styles': path.join(__dirname, 'src', 'styles'),
+				// '@widgets': path.join(__dirname, 'src', 'widgets'),
+				'@fonts': path.join(__dirname, 'src', 'fonts'),
+				// '@config': path.join(__dirname, 'src', 'config'),
+				'@utils': path.join(__dirname, 'src', 'utils'),
+				'@hooks': path.join(__dirname, 'src', 'hooks')
+			}
+		}
+	});
+};
