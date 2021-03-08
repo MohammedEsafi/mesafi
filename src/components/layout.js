@@ -31,7 +31,7 @@ const Layout = ({ children, location }) => {
 		const year = new Date().getFullYear();
 
 		console.log(
-			`All rights are reserved — ©${year} — Made with 🖤 by %cMohammed Esafi`,
+			`© ${year}. All rights are reserved — Made with 🖤 by %cMohammed Esafi`,
 			'font-style: italic'
 		);
 
