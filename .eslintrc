@@ -16,8 +16,9 @@
 	"rules": {
 		"prettier/prettier": "error",
 		"react/jsx-filename-extension": "off",
-		"import/prefer-default-export": "off",
 		"react/forbid-prop-types": "off",
+		"import/prefer-default-export": "off",
+		"import/no-cycle": "off",
 		"import/named": "off",
 		"no-console": "off"
 	},
