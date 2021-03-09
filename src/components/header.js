@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.header`
+import { Flex } from '@styles';
+import { Menu } from '@components';
+import { clamping } from '@utils';
+import { breakpoints, padding } from '@config';
+
+const Wrapper = styled(Flex)`
 	width: 100%;
+	height: 70px;
 	max-width: var(--max-width);
-	padding: var(--padding);
-	background-color: red;
+	padding: ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 `;
 
 const Header = () => (
-	<Wrapper>
+	<Wrapper as='header' alignItems='center' justifyContent='space-between'>
 		<p>Header</p>
+		<Menu />
 	</Wrapper>
 );
 
