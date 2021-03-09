@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 	:root {
 		--font: 'Inter', sans-serif;
-		--padding: 0 20px;
 		--max-width: 1200px;
 	}
 
@@ -20,7 +19,12 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		font-family: var(--font);
+		color: ${({ theme }) => theme.onBackground};
 		background-color: ${({ theme }) => theme.background};
+	}
+
+	a {
+		text-decoration: none;
 	}
 `;
 
