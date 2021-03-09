@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle, Theme } from '@styles';
-import { SEO } from '@components';
+import { GlobalStyle, Theme, Flex } from '@styles';
+import { SEO, Header } from '@components';
 import { useMode } from '@hooks';
+
+const Main = styled.main`
+	width: 100%;
+`;
 
 const Layout = ({ children, location }) => {
 	const [mounted, setMounted] = useState(false);
@@ -30,14 +34,9 @@ const Layout = ({ children, location }) => {
 	useEffect(() => {
 		const year = new Date().getFullYear();
 
-		console.log(
-			`© ${year}. All rights are reserved — Made with 🖤 by %cMohammed Esafi`,
-			'font-style: italic'
-		);
+		console.log(`© ${year}. All rights are reserved — Made with 🖤 by %cMohammed Esafi`, 'font-style: italic');
 
-		console.log(
-			'This website was coded using Gatsby, React, GraphQL, Styled Components and hosted on Netlify'
-		);
+		console.log('This website was coded using Gatsby, React, GraphQL, Styled Components and hosted on Netlify');
 
 		console.log('Open sourced on: https://github.com/MohammedEsafi/mesafi');
 
@@ -50,11 +49,15 @@ const Layout = ({ children, location }) => {
 				<ThemeProvider theme={themeMode}>
 					<SEO title='Home' />
 					<GlobalStyle />
-					<div id='root'>
-						{/* NOTE: Header */}
-						<main>{children}</main>
+					<Flex flexDirection='column' width='100%' alignItems='center'>
+						<Header />
+						<Main>
+							<Flex flexDirection='column' width='100%' alignItems='center'>
+								{children}
+							</Flex>
+						</Main>
 						{/* NOTE: Footer */}
-					</div>
+					</Flex>
 				</ThemeProvider>
 			</>
 		)
