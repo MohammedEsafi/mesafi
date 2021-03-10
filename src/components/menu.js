@@ -15,6 +15,7 @@ const UL = styled(Flex)`
 
 	& > li > a {
 		color: ${({ theme }) => theme.onBackground};
+		font-weight: 600;
 	}
 `;
 
