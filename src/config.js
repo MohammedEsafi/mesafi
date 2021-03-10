@@ -1,4 +1,6 @@
 module.exports = {
+	email: 'hello@mesafi.com',
+
 	defaultTheme: 'dark',
 
 	// media query breakpoints in `rem` unit
@@ -20,7 +22,7 @@ module.exports = {
 			url: '/#about'
 		},
 		{
-			name: 'Work',
+			name: 'Projects',
 			url: '/#projects'
 		},
 		{
