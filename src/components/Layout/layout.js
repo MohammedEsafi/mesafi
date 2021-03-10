@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, Theme, Flex } from '@styles';
-import { SEO, Header } from '@components';
+import { Header } from '@components';
+import { SEO } from '@components/Layout';
 import { useMode } from '@hooks';
 
 const Main = styled.main`
