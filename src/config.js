@@ -22,8 +22,8 @@ module.exports = {
 			url: '/#about'
 		},
 		{
-			name: 'Projects',
-			url: '/#projects'
+			name: 'Work',
+			url: '/#Work'
 		},
 		{
 			name: 'Contact',
