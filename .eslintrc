@@ -18,6 +18,7 @@
 		"react/jsx-filename-extension": "off",
 		"react/forbid-prop-types": "off",
 		"react/no-array-index-key": "off",
+		"react/no-danger": "off",
 		"import/prefer-default-export": "off",
 		"import/no-cycle": "off",
 		"import/named": "off",
@@ -27,6 +28,7 @@
 		"import/resolver": {
 			"alias": [
 				["@components", "./src/components"],
+				["@sections", "./src/sections"],
 				["@styles", "./src/styles"],
 				["@utils", "./src/utils"],
 				["@hooks", "./src/hooks"],
