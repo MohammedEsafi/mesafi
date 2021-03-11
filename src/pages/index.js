@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Layout } from '@components';
+import { Hero } from '@sections';
 
 const IndexPage = ({ location }) => (
 	<Layout location={location}>
-		<h1>Hi people</h1>
+		<Hero />
 	</Layout>
 );
 

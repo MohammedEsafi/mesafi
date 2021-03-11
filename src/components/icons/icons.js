@@ -1,6 +1,7 @@
 import React from 'react';
-import { Mail, Arrow } from '@components/icons';
 import ProtoTypes from 'prop-types';
+
+import { Mail, Arrow } from '@components/icons';
 
 const Icons = ({ name }) => {
 	switch (name.toLowerCase()) {
