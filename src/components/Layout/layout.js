@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, Theme, Flex } from '@styles';
 import { Header } from '@components';
-import { SEO } from '@components/Layout';
+import { SEO } from '@components/layout';
 import { useMode } from '@hooks';
 
 const Main = styled.main`
@@ -53,7 +53,7 @@ const Layout = ({ children, location }) => {
 					<Flex flexDirection='column' width='100%' alignItems='center'>
 						<Header />
 						<Main>
-							<Flex flexDirection='column' width='100%' alignItems='center'>
+							<Flex flexDirection='column' width='100%'>
 								{children}
 							</Flex>
 						</Main>
