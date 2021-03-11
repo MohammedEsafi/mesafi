@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
 		font-family: var(--font);
 		color: ${({ theme }) => theme.onBackground};
 		background-color: ${({ theme }) => theme.background};
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
 	}
 
 	a {
