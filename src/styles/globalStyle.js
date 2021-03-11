@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 	:root {
 		--font: 'Inter', sans-serif;
 		--max-width: 1200px;
+		--nav-height: 100px;
 	}
 
 	html {
