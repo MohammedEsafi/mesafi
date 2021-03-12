@@ -11,10 +11,16 @@ const Wrapper = styled(Flex)`
 const Brief = styled.div`
 	& h1 {
 		text-align: center;
+		font-size: 20px;
+		margin: 0 0 41px;
+		font-weight: 500;
 	}
 
 	& p {
 		text-align: center;
+		font-size: 20px;
+		margin: 0 0 41px;
+		font-weight: 500;
 	}
 `;
 
