@@ -16,6 +16,17 @@ module.exports = {
 		max: 3.25
 	},
 
+	// font size in in `rem` unit
+	fontSize: {
+		xxs: 14 / 16,
+		xs: 16 / 16,
+		sm: 18 / 16,
+		md: 20 / 16,
+		lg: 24 / 16,
+		xl: 30 / 16,
+		xxl: 38 / 16
+	},
+
 	navLinks: [
 		{
 			name: 'About',
