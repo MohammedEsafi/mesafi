@@ -1,6 +1,1 @@
----
-avatar: "DD"
-greetings: "<span role='imag' aria-hidden='true' >👋<span> Hi! I'm Mohammed Esafi"
----
-
-Freelance developer and Indie maker
+— Hi! I’m a software engineer, product designer, indie maker, and upcoming entrepreneur.
