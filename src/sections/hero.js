@@ -3,23 +3,23 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex, Button } from '@styles';
+import { clamping } from '@utils';
+import { breakpoints, padding, fontSize } from '@config';
 
 const Wrapper = styled(Flex)`
 	height: calc(100vh - var(--nav-height));
+	max-width: var(--max-width);
+	margin: auto;
+	padding: 20px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 `;
 
 const Brief = styled.div`
-	& h1 {
-		text-align: center;
-		font-size: 20px;
-		margin: 0 0 41px;
-		font-weight: 500;
-	}
-
 	& p {
 		text-align: center;
-		font-size: 20px;
-		margin: 0 0 41px;
+		font-size: 40px;
+		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.sm, fontSize.xxl)};
+		line-height: 2em;
+		margin: 100px 0;
 		font-weight: 500;
 	}
 `;
@@ -29,10 +29,6 @@ const Hero = () => {
 		query {
 			markdownRemark(fileAbsolutePath: { regex: "/hero/" }) {
 				html
-				frontmatter {
-					avatar
-					greetings
-				}
 			}
 		}
 	`);
@@ -40,7 +36,6 @@ const Hero = () => {
 	return (
 		<Wrapper alignItems='center' justifyContent='center' flexDirection='column'>
 			<Brief>
-				<h1 dangerouslySetInnerHTML={{ __html: data.markdownRemark.frontmatter.greetings }} />
 				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			</Brief>
 			<Button>connect with me</Button>
