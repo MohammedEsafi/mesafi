@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Flex } from '@styles';
-import { Menu, Email } from '@components/header';
+import { Menu, Logo } from '@components/header';
 import { clamping } from '@utils';
 import { breakpoints, padding } from '@config';
 
@@ -15,7 +15,7 @@ const Wrapper = styled(Flex)`
 
 const Header = () => (
 	<Wrapper as='header' alignItems='center' justifyContent='space-between'>
-		<Email />
+		<Logo />
 		<Menu />
 	</Wrapper>
 );
