@@ -21,8 +21,8 @@ const Cornea = styled.div`
 `;
 
 const Iris = styled.div`
-	width: 60%;
-	height: 60%;
+	width: 10px;
+	height: 10px;
 	background-color: ${({ theme }) => theme.background};
 	border-radius: 50%;
 	transition: all 0.2s ease-in-out;
@@ -78,31 +78,28 @@ const Wrapper = styled.div`
 
 const Logo = () => {
 	const orthogonalRef = useRef(null);
-	const irisRef = useRef(null);
 	const corneaRef = useRef(null);
 
 	useEffect(() => {
 		const getAngle = (iris, cursor, orthogonal) => {
 			let angle = Math.atan2(cursor.y - orthogonal.y, cursor.x - orthogonal.x) - Math.atan2(iris.y - orthogonal.y, iris.x - orthogonal.x);
 
-			if (angle > Math.PI) angle -= 2 * Math.PI;
-			else if (angle <= -Math.PI) angle += 2 * Math.PI;
+			if (angle < 0) angle += 2 * Math.PI;
 
 			return (angle * 180) / Math.PI;
 		};
 
 		const eventHandler = (event) => {
 			const orthogonalRect = orthogonalRef.current.getBoundingClientRect();
-			const irisRect = irisRef.current.getBoundingClientRect();
 
 			const orthogonal = {
 				x: orthogonalRect.left + orthogonalRect.width / 2,
 				y: orthogonalRect.top + orthogonalRect.height / 2
 			};
 
-			const iris = {
-				x: irisRect.left + irisRect.width / 2,
-				y: irisRect.top
+			const transformOrigin = {
+				x: orthogonalRect.left + orthogonalRect.width / 2,
+				y: orthogonalRect.top
 			};
 
 			const cursor = {
@@ -110,9 +107,10 @@ const Logo = () => {
 				y: event.clientY
 			};
 
-			const angle = getAngle(iris, cursor, orthogonal);
+			const angle = getAngle(transformOrigin, cursor, orthogonal);
 
-			corneaRef.current.style.transform = `rotate(${angle}deg)`;
+			console.log(Math.round(angle));
+			corneaRef.current.style.transform = `rotate(${Math.round(angle)}deg)`;
 		};
 
 		window.addEventListener('mousemove', eventHandler);
@@ -126,7 +124,7 @@ const Logo = () => {
 		<Wrapper>
 			<Sclera ref={orthogonalRef}>
 				<Cornea ref={corneaRef}>
-					<Iris ref={irisRef} />
+					<Iris />
 				</Cornea>
 				<Eyelashes />
 			</Sclera>
