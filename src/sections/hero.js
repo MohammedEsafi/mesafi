@@ -19,7 +19,7 @@ const Brief = styled.div`
 		font-size: 40px;
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.sm, fontSize.xxl)};
 		line-height: 2em;
-		margin: 100px 0;
+		margin: 0 0 100px;
 		font-weight: 500;
 	}
 `;
