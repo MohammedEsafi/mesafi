@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex, Button } from '@styles';
 import { clamping } from '@utils';
-import { breakpoints, padding, fontSize } from '@config';
+import { breakpoints, padding, fontSize, srConfig } from '@config';
+import sr from '@utils/sr';
 
 const Wrapper = styled(Flex)`
 	height: calc(100vh - var(--nav-height));
@@ -25,6 +26,9 @@ const Brief = styled.div`
 `;
 
 const Hero = () => {
+	const briefRef = useRef(null);
+	const buttonRef = useRef(null);
+
 	const data = useStaticQuery(graphql`
 		query {
 			markdownRemark(fileAbsolutePath: { regex: "/hero/" }) {
@@ -33,12 +37,22 @@ const Hero = () => {
 		}
 	`);
 
+	useEffect(() => {
+		sr.reveal(briefRef.current, srConfig({ delay: 300 }));
+		sr.reveal(buttonRef.current, srConfig({ delay: 350 }));
+
+		return () => {
+			sr.clean(briefRef.current);
+			sr.clean(buttonRef.current);
+		};
+	}, []);
+
 	return (
-		<Wrapper alignItems='center' justifyContent='center' flexDirection='column'>
-			<Brief>
+		<Wrapper as='section' alignItems='center' justifyContent='center' flexDirection='column'>
+			<Brief ref={briefRef}>
 				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			</Brief>
-			<Button>connect with me</Button>
+			<Button ref={buttonRef}>connect with me</Button>
 		</Wrapper>
 	);
 };
