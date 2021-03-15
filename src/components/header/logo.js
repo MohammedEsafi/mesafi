@@ -109,7 +109,6 @@ const Logo = () => {
 
 			const angle = getAngle(transformOrigin, cursor, orthogonal);
 
-			console.log(Math.round(angle));
 			corneaRef.current.style.transform = `rotate(${Math.round(angle)}deg)`;
 		};
 
