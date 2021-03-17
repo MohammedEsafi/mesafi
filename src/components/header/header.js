@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { Flex } from '@styles';
-import { Menu, Logo } from '@components/header';
+import { Menu, Logo, Toggle } from '@components/header';
 import { clamping } from '@utils';
 import { breakpoints, padding, srConfig } from '@config';
 import sr from '@utils/sr';
@@ -14,7 +15,7 @@ const Wrapper = styled(Flex)`
 	padding: 20px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)} 0;
 `;
 
-const Header = () => {
+const Header = ({ toggleMode }) => {
 	const wrapperRef = useRef(null);
 
 	useEffect(() => {
@@ -28,9 +29,16 @@ const Header = () => {
 	return (
 		<Wrapper as='header' alignItems='center' justifyContent='space-between' ref={wrapperRef}>
 			<Logo />
-			<Menu />
+			<Flex alignItems='center'>
+				<Menu />
+				<Toggle toggleMode={toggleMode} />
+			</Flex>
 		</Wrapper>
 	);
+};
+
+Header.propTypes = {
+	toggleMode: PropTypes.func.isRequired
 };
 
 export default Header;

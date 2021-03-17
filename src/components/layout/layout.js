@@ -13,7 +13,7 @@ const Main = styled.main`
 
 const Layout = ({ children, location }) => {
 	const [mounted, setMounted] = useState(false);
-	const [mode] = useMode();
+	const [mode, toggleMode] = useMode();
 	const { darkTheme, lightTheme } = Theme;
 	const themeMode = mode === 'dark' ? darkTheme : lightTheme;
 
@@ -51,7 +51,7 @@ const Layout = ({ children, location }) => {
 					<SEO title='Home' />
 					<GlobalStyle />
 					<Flex flexDirection='column' width='100%' alignItems='center'>
-						<Header />
+						<Header toggleMode={toggleMode} />
 						<Main>
 							<Flex flexDirection='column' width='100%'>
 								{children}
