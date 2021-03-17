@@ -11,7 +11,7 @@ const UL = styled(Flex)`
 	padding: 0;
 
 	& > li > a {
-		color: ${({ theme }) => theme.onBackground};
+		color: ${({ theme }) => theme.text.primary};
 		padding: 20px 30px;
 	}
 `;

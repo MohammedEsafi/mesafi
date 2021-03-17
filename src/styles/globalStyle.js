@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		font-family: var(--font);
-		color: ${({ theme }) => theme.onBackground};
+		color: ${({ theme }) => theme.text.primary};
 		background-color: ${({ theme }) => theme.background};
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -34,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
 
 	a {
 		text-decoration: none;
+	}
+
+	button:active,
+	button:focus {
+		outline: none;
 	}
 `;
 
