@@ -32,7 +32,7 @@ const Card = styled(Flex)`
 	}
 
 	& p {
-		color: ${({ theme }) => theme.text};
+		color: ${({ theme }) => theme.text.subdued};
 		margin: 1.25em 0;
 	}
 `;

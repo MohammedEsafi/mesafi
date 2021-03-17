@@ -9,8 +9,8 @@ const Sclera = styled.div`
 	width: 27px;
 	height: 19px;
 	border-radius: 50%;
-	background-color: ${({ theme }) => theme.onBackground};
-	border: 1px solid ${({ theme }) => theme.onBackground};
+	background-color: ${({ theme }) => theme.text.primary};
+	border: 1px solid ${({ theme }) => theme.text.primary};
 `;
 
 const Cornea = styled.div`
@@ -32,7 +32,7 @@ const Eyelashes = styled.span`
 	position: absolute;
 	width: 3px;
 	height: 0;
-	background-color: ${({ theme }) => theme.onBackground};
+	background-color: ${({ theme }) => theme.text.primary};
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, -25px);
@@ -45,7 +45,7 @@ const Eyelashes = styled.span`
 		width: 3px;
 		height: 91%;
 		bottom: 0;
-		background-color: ${({ theme }) => theme.onBackground};
+		background-color: ${({ theme }) => theme.text.primary};
 		transform: translate(-11px, 2px) rotate(-25deg);
 		border-radius: 20px;
 	}
@@ -56,7 +56,7 @@ const Eyelashes = styled.span`
 		width: 3px;
 		height: 91%;
 		bottom: 0;
-		background-color: ${({ theme }) => theme.onBackground};
+		background-color: ${({ theme }) => theme.text.primary};
 		transform: translate(11px, 2px) rotate(25deg);
 		border-radius: 20px;
 	}
