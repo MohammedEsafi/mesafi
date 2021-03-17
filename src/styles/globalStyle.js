@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
 		text-rendering: optimizeLegibility;
 	}
 
+	section {
+		width: 100%;
+	}
+
 	a {
 		text-decoration: none;
 	}
