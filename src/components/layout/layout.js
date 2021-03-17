@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, Theme, Flex } from '@styles';
-import { Header } from '@components';
+import { Header, Footer } from '@components';
 import { SEO } from '@components/layout';
 import { useMode } from '@hooks';
 
@@ -57,7 +57,7 @@ const Layout = ({ children, location }) => {
 								{children}
 							</Flex>
 						</Main>
-						{/* NOTE: Footer */}
+						<Footer />
 					</Flex>
 				</ThemeProvider>
 			</>
