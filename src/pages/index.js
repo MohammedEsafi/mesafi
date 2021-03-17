@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Layout } from '@components';
-import { Hero } from '@sections';
+import { Hero, Resume } from '@sections';
 
 const IndexPage = ({ location }) => (
 	<Layout location={location}>
-		<Hero />
+		{/* <Hero /> */}
+		{/* <Resume /> */}
 	</Layout>
 );
 
