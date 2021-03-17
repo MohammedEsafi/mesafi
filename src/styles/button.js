@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-	background-color: ${({ theme }) => theme.onBackground};
+	background-color: ${({ theme }) => theme.text.primary};
 	color: ${({ theme }) => theme.background};
 	cursor: pointer;
 	padding: 24px 52px;
@@ -9,11 +9,6 @@ const Button = styled.button`
 	text-transform: uppercase;
 	font-weight: 600;
 	border: none;
-
-	&:active,
-	&:focus {
-		outline: none;
-	}
 `;
 
 export default Button;
