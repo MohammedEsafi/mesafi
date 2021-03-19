@@ -12,7 +12,7 @@ module.exports = {
 
 	// inline start and end padding of every main section in `rem` unit
 	padding: {
-		min: 1.25,
+		min: 1.5,
 		max: 3.25
 	},
 
@@ -34,7 +34,7 @@ module.exports = {
 		},
 		{
 			name: 'Work',
-			url: '/#Work'
+			url: '/#work'
 		},
 		{
 			name: 'Contact',
