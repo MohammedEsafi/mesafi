@@ -6,8 +6,8 @@ import { Hero, Resume } from '@sections';
 
 const IndexPage = ({ location }) => (
 	<Layout location={location}>
-		{/* <Hero /> */}
-		{/* <Resume /> */}
+		<Hero />
+		<Resume />
 	</Layout>
 );
 
