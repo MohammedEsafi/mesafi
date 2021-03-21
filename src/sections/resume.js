@@ -13,19 +13,29 @@ const Wrapper = styled(Flex)`
 	padding: 50px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 
 	& > div {
-		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
 		line-height: 2.5em;
+		font-weight: 500;
+
+		& > p {
+			font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
+		}
 
 		& > ul {
-			display: flex;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 20px;
 			margin: 0;
 			padding: 0;
 			list-style: none;
 
 			& > li {
-				width: 50%;
-				color: ${({ theme }) => theme.text.subdued};
+				font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xxs, fontSize.xs)};
+
+				&:before {
+					content: '▹';
+					margin-right: 10px;
+					color: ${({ theme }) => theme.secondary};
+				}
 			}
 		}
 	}
