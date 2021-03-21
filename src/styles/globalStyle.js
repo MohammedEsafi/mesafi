@@ -40,6 +40,10 @@ const GlobalStyle = createGlobalStyle`
 	button:focus {
 		outline: none;
 	}
+
+	span[role="img"][aria-hidden] {
+		font-family: initial;
+	}
 `;
 
 export default GlobalStyle;
