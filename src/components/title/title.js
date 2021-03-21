@@ -9,8 +9,8 @@ const Wrapper = styled.h1`
 	font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xxs, fontSize.xs)};
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #aab2bd;
-	letter-spacing: 0.1em;
+	color: ${({ theme }) => theme.subdued};
+	letter-spacing: 0.05em;
 	transform: scaleY(0.8);
 `;
 
