@@ -1,6 +1,6 @@
-Hey 👋 I'm Mohammed — a software engineer based in Morocco ! 🇲🇦 I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion. I love thing about JavaScript, Python and Flutter ❤️
+Hey <span role="img" aria-hidden="true">👋</span> I'm Mohammed — a software engineer based in Morocco ! <span role="img" aria-hidden="true">🇲🇦</span> I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion. I love JavaScript and its ecosystem. <span role="img" aria-hidden="true">❤️</span>
 
-Here are a few technologies I've been working with recently ::
+Here are a few technologies I've been working with recently <span role="img" aria-hidden="true">👇</span>
 
 - JavaScript (ES6+)
 - NextJS
