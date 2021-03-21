@@ -42,6 +42,25 @@ module.exports = {
 		}
 	],
 
+	socialLinks: [
+		{
+			name: 'Twitter',
+			url: 'https://twitter.com/MohammedEsafi'
+		},
+		{
+			name: 'Dribbble',
+			url: 'https://twitter.com/MohammedEsafi'
+		},
+		{
+			name: 'Figma',
+			url: 'https://twitter.com/MohammedEsafi'
+		},
+		{
+			name: 'Dribbble',
+			url: 'https://twitter.com/MohammedEsafi'
+		}
+	],
+
 	srConfig: ({ origin = 'bottom', delay = 200, viewFactor = 0.25 }) => ({
 		origin,
 		distance: '10px',
