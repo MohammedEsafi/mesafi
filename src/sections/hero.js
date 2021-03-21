@@ -21,7 +21,7 @@ const Brief = styled.div`
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.sm, fontSize.xxl)};
 		line-height: 2em;
 		margin: 0 0 100px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 `;
 
