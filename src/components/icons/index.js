@@ -3,4 +3,5 @@ export { default as Arrow } from './arrow';
 export { default as Twitter } from './twitter';
 export { default as Dribbble } from './dribbble';
 export { default as Figma } from './figma';
+export { default as Link } from './link';
 export { default } from './icons';
