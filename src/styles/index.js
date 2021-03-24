@@ -3,3 +3,4 @@ export { default as GlobalStyle } from './globalStyle';
 export { default as Flex } from './flex';
 export { default as Grid } from './grid';
 export { default as Button } from './button';
+export { default as media } from './media';
