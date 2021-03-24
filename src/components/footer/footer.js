@@ -2,19 +2,20 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { Link } from 'gatsby';
 
-import { Flex } from '@styles';
-import { clamping, hex2rgba } from '@utils';
-import { breakpoints, padding, socialLinks } from '@config';
+import { Flex, media } from '@styles';
+import { clamping } from '@utils';
+import { breakpoints, padding, socialLinks, fontSize } from '@config';
 import Icons from '@components/icons';
 
 const Wrapper = styled(Flex)`
 	width: 100%;
 	max-width: var(--max-width);
 	padding: 50px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
-	border-top: 1px solid ${({ theme }) => theme.subdued};
+	box-shadow: ${({ theme }) => theme.shadow} 0 1px 0 0 inset;
 
 	& > p {
 		white-space: nowrap;
+		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
 
 		& a {
 			color: ${({ theme }) => theme.secondary};
@@ -24,6 +25,15 @@ const Wrapper = styled(Flex)`
 	& svg {
 		max-width: 0.8em;
 	}
+
+	${media.tablet`
+		flex-direction: column-reverse;
+		align-items: center;
+
+		& > p {
+			margin: 35px 0 0;
+		}
+	`}
 `;
 
 const List = styled.ul`
@@ -31,31 +41,25 @@ const List = styled.ul`
 	padding: 0;
 	list-style: none;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	& > li {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background-color: ${({ theme }) => hex2rgba(theme.subdued, 0.5)};
+		width: 20px;
+		height: 20px;
 
 		&:not(:last-child) {
 			margin-right: 25px;
 		}
 
-		&:hover {
-			background-color: ${({ theme }) => theme.subdued};
-		}
-
 		& a {
 			width: 100%;
 			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 		}
 
 		& svg {
-			max-width: 35%;
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 `;
@@ -67,17 +71,17 @@ const Footer = () => {
 		<Wrapper as='footer' justifyContent='space-between'>
 			<p>
 				Designed & Built by
-				<Link to='https://github.com/MohammedEsafi' target='_blank'>
+				<a href='https://github.com/MohammedEsafi'>
 					<span> Mohammed Esafi </span>
 					<Icons name='link' />
-				</Link>
+				</a>
 			</p>
 			<List>
 				{socialLinks?.map(({ name, url }, index) => (
 					<li key={index}>
-						<Link to={url}>
+						<a href={url}>
 							<Icons name={name} fill={theme.onBackground} />
-						</Link>
+						</a>
 					</li>
 				))}
 			</List>
