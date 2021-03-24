@@ -14,11 +14,7 @@ const Wrapper = styled(Flex)`
 
 	& > div {
 		line-height: 2.5em;
-		font-weight: 500;
-
-		& > p {
-			font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
-		}
+		font-weight: 400;
 
 		& > ul {
 			display: grid;
@@ -28,14 +24,11 @@ const Wrapper = styled(Flex)`
 			padding: 0;
 			list-style: none;
 
-			& > li {
-				font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xxs, fontSize.xs)};
-
-				&:before {
-					content: '▹';
-					margin-right: 10px;
-					color: ${({ theme }) => theme.secondary};
-				}
+			& > li:before {
+				content: '▹';
+				margin-right: 10px;
+				color: ${({ theme }) => theme.secondary};
+				font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
 			}
 		}
 	}
