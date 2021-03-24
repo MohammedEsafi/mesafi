@@ -8,7 +8,11 @@ const Arrow = ({ fill }) => (
 );
 
 Arrow.propTypes = {
-	fill: PropTypes.string.isRequired
+	fill: PropTypes.string
+};
+
+Arrow.defaultProps = {
+	fill: 'currentColor'
 };
 
 export default Arrow;

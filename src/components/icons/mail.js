@@ -11,7 +11,11 @@ const Mail = ({ fill }) => (
 );
 
 Mail.propTypes = {
-	fill: PropTypes.string.isRequired
+	fill: PropTypes.string
+};
+
+Mail.defaultProps = {
+	fill: 'currentColor'
 };
 
 export default Mail;
