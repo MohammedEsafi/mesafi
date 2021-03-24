@@ -13,7 +13,11 @@ const Figma = ({ fill }) => (
 );
 
 Figma.propTypes = {
-	fill: PropTypes.string.isRequired
+	fill: PropTypes.string
+};
+
+Figma.defaultProps = {
+	fill: 'currentColor'
 };
 
 export default Figma;
