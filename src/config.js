@@ -44,19 +44,19 @@ module.exports = {
 
 	socialLinks: [
 		{
+			name: 'Github',
+			url: 'https://github.com/MohammedEsafi'
+		},
+		{
+			name: 'Dribbble',
+			url: 'https://twitter.com/MohammedEsafi'
+		},
+		{
+			name: 'Linkedin',
+			url: 'https://twitter.com/MohammedEsafi'
+		},
+		{
 			name: 'Twitter',
-			url: 'https://twitter.com/MohammedEsafi'
-		},
-		{
-			name: 'Dribbble',
-			url: 'https://twitter.com/MohammedEsafi'
-		},
-		{
-			name: 'Figma',
-			url: 'https://twitter.com/MohammedEsafi'
-		},
-		{
-			name: 'Dribbble',
 			url: 'https://twitter.com/MohammedEsafi'
 		}
 	],
