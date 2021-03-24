@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Flex } from '@styles';
+import { Flex, media } from '@styles';
 import { navLinks } from '@config';
 import { Title } from '@components/header/menu';
 
@@ -14,6 +14,10 @@ const UL = styled(Flex)`
 		color: ${({ theme }) => theme.text.primary};
 		padding: 20px 30px;
 	}
+
+	${media.tablet`
+		display: none;
+	`}
 `;
 
 const Menu = () => (
