@@ -1,10 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { clamping } from '@utils';
+import { breakpoints, fontSize } from '@config';
+
 const GlobalStyle = createGlobalStyle`
 	:root {
 		--font: 'FuturaPT', sans-serif;
 		--max-width: 1200px;
 		--nav-height: 100px;
+		--nav-scroll-height: 70px;
 	}
 
 	html {
@@ -20,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		font-family: var(--font);
+		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.sm, fontSize.md)};
 		color: ${({ theme }) => theme.text.primary};
 		background-color: ${({ theme }) => theme.background};
 		-webkit-font-smoothing: antialiased;
