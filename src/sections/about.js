@@ -34,21 +34,24 @@ const Wrapper = styled(Flex)`
 	}
 `;
 
-const Resume = () => {
+const About = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			markdownRemark(fileAbsolutePath: { regex: "/resume/" }) {
+			markdownRemark(fileAbsolutePath: { regex: "/About/" }) {
 				html
+				frontmatter {
+					title
+				}
 			}
 		}
 	`);
 
 	return (
 		<Wrapper as='section' flexDirection='column'>
-			<Title>resume</Title>
+			<Title>{data.markdownRemark.frontmatter.title}</Title>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Wrapper>
 	);
 };
 
-export default Resume;
+export default About;
