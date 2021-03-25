@@ -31,7 +31,7 @@ const Hero = () => {
 
 	const data = useStaticQuery(graphql`
 		query {
-			markdownRemark(fileAbsolutePath: { regex: "/hero/" }) {
+			markdownRemark(fileAbsolutePath: { regex: "/Hero/" }) {
 				html
 			}
 		}
