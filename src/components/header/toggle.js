@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.button`
+	padding: 10px;
 	margin-left: 20px;
 	cursor: pointer;
-	padding: 0;
 	background-color: transparent;
 	border: none;
 `;

@@ -42,7 +42,6 @@ const List = styled.ul`
 	list-style: none;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 
 	& > li {
 		width: 20px;
@@ -55,6 +54,9 @@ const List = styled.ul`
 		& a {
 			width: 100%;
 			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		& svg {
