@@ -16,18 +16,18 @@ const Wrapper = styled(Flex)`
 	height: var(--nav-height);
 	max-width: var(--max-width);
 	padding: 0 ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
-	transition-property: height, box-shadow;
+	transition-property: height;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 	z-index: 100;
 
-	${media.tablet`		
+	${media.tablet`
 		${(props) =>
 			props.fixed &&
 			css`
 				position: fixed;
 				height: var(--nav-scroll-height);
-				box-shadow: ${({ theme }) => hex2rgba(theme.onBackground, 0.1)} 0 -1px inset;
+				box-shadow: ${({ theme }) => hex2rgba(theme.shadow, 1)} 0 -1px inset;
 			`}
 	`}
 `;
