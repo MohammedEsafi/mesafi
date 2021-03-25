@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { Link } from 'gatsby';
 
 import { Flex, media } from '@styles';
 import { clamping } from '@utils';
@@ -23,7 +22,7 @@ const Wrapper = styled(Flex)`
 	}
 
 	& svg {
-		max-width: 0.8em;
+		max-width: 0.7em;
 	}
 
 	${media.tablet`

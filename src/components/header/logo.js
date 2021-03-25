@@ -9,7 +9,7 @@ const Wrapper = styled(Link)`
 	height: 40px;
 `;
 
-const Draw = styled.span`
+const Content = styled.span`
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
@@ -39,7 +39,7 @@ const Draw = styled.span`
 
 const Brand = () => (
 	<Wrapper to='/'>
-		<Draw />
+		<Content />
 	</Wrapper>
 );
 
