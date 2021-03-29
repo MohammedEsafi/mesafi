@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { easing } from '@config';
+
 const Finger = styled.span`
 	display: inline-block;
 `;
@@ -22,7 +24,7 @@ const Title = ({ text }) => {
 			],
 			{
 				duration: 1000,
-				easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+				easing,
 				fill: 'forwards'
 			}
 		);

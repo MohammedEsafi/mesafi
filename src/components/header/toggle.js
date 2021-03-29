@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { easing } from '@config';
+
 const Wrapper = styled.button`
 	padding: 10px;
 	margin-left: 20px;
@@ -17,13 +19,13 @@ const Content = styled.div`
 	border: 1px ${({ theme }) => theme.onBackground} solid;
 	border-radius: 50%;
 	background-color: ${({ theme }) => theme.onBackground};
-	transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: background-color 300ms ${easing};
 
 	&:after {
 		content: '';
 		border-radius: 100px 0 0 100px;
 		background-color: ${({ theme }) => theme.background};
-		transition: background-color 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+		transition: background-color 300ms ${easing};
 		position: absolute;
 		width: 9px;
 		height: 18px;
