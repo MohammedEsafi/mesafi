@@ -18,7 +18,11 @@ const Content = styled(Flex)`
 	margin: auto;
 	padding: 0 ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 	font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.md, fontSize.xl)};
-	text-align: center;
+
+	& p {
+		text-align: center;
+		margin-bottom: 0;
+	}
 
 	& a {
 		color: ${({ theme }) => theme.secondary};
@@ -39,12 +43,14 @@ const Contact = () => {
 	`);
 
 	return (
-		<Wrapper as='section'>
+		<Wrapper id='contact' as='section'>
 			<Content flexDirection='column' justifyContent='center'>
 				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-				<a href={`mailto:${email}`}>
-					<span>{email}</span> <Icons name='link' />
-				</a>
+				<p>
+					<a href={`mailto:${email}`}>
+						<span>{email}</span> <Icons name='link' />
+					</a>
+				</p>
 			</Content>
 		</Wrapper>
 	);
