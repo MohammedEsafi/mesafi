@@ -7,6 +7,11 @@ import { Header, Footer } from '@components';
 import { SEO } from '@components/layout';
 import { useMode } from '@hooks';
 
+if (typeof window !== 'undefined') {
+	// eslint-disable-next-line global-require
+	require('smooth-scroll')('a[href*="#"]');
+}
+
 const Main = styled.main`
 	width: 100%;
 `;
