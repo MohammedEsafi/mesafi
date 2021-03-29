@@ -14,6 +14,7 @@ const Wrapper = styled(Flex)`
 
 	& > p {
 		white-space: nowrap;
+		line-height: normal;
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
 
 		& a {

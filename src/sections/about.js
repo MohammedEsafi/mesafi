@@ -12,24 +12,19 @@ const Wrapper = styled(Flex)`
 	margin: auto;
 	padding: 50px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 
-	& > div {
-		line-height: 2.5em;
-		font-weight: 400;
+	& > div > ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 
-		& > ul {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			column-gap: 20px;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-
-			& > li:before {
-				content: '▹';
-				margin-right: 10px;
-				color: ${({ theme }) => theme.secondary};
-				font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
-			}
+		& > li:before {
+			content: '▹';
+			margin-right: 10px;
+			color: ${({ theme }) => theme.secondary};
+			font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.xs, fontSize.sm)};
 		}
 	}
 `;
@@ -47,7 +42,7 @@ const About = () => {
 	`);
 
 	return (
-		<Wrapper as='section' flexDirection='column'>
+		<Wrapper id='about' as='section' flexDirection='column'>
 			<Title>{data.markdownRemark.frontmatter.title}</Title>
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 		</Wrapper>

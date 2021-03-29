@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		font-family: var(--font);
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.sm, fontSize.md)};
+		line-height: 2.5em;
 		color: ${({ theme }) => theme.text.primary};
 		background-color: ${({ theme }) => theme.background};
 		-webkit-font-smoothing: antialiased;
