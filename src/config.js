@@ -1,32 +1,6 @@
 module.exports = {
-	email: 'hello@mesafi.com',
-
 	defaultTheme: 'dark',
-
-	// media query breakpoints in `rem` unit
-	breakpoints: {
-		desktop: 1200 / 16,
-		tablet: 768 / 16,
-		phone: 480 / 16
-	},
-
-	// inline start and end padding of every main section in `rem` unit
-	padding: {
-		min: 1.5,
-		max: 3.25
-	},
-
-	// font size in in `rem` unit
-	fontSize: {
-		xxs: 14 / 16,
-		xs: 16 / 16,
-		sm: 18 / 16,
-		md: 20 / 16,
-		lg: 24 / 16,
-		xl: 30 / 16,
-		xxl: 38 / 16
-	},
-
+	email: 'hello@mesafi.com',
 	navLinks: [
 		{
 			name: 'About',
@@ -41,7 +15,6 @@ module.exports = {
 			url: '/#contact'
 		}
 	],
-
 	socialLinks: [
 		{
 			name: 'Github',
@@ -49,11 +22,11 @@ module.exports = {
 		},
 		{
 			name: 'Dribbble',
-			url: 'https://twitter.com/MohammedEsafi'
+			url: 'https://dribbble.com/MohammedEsafi'
 		},
 		{
 			name: 'Linkedin',
-			url: 'https://twitter.com/MohammedEsafi'
+			url: 'https://www.linkedin.com/in/MohammedEsafi'
 		},
 		{
 			name: 'Twitter',
@@ -61,6 +34,25 @@ module.exports = {
 		}
 	],
 
+	breakpoints: {
+		desktop: 1200 / 16,
+		tablet: 768 / 16,
+		phone: 480 / 16
+	},
+	padding: {
+		min: 1.5,
+		max: 3.25
+	},
+	fontSize: {
+		xxs: 14 / 16,
+		xs: 16 / 16,
+		sm: 18 / 16,
+		md: 20 / 16,
+		lg: 24 / 16,
+		xl: 30 / 16,
+		xxl: 38 / 16
+	},
+	easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
 	srConfig: ({ origin = 'bottom', delay = 200, viewFactor = 0.25 }) => ({
 		origin,
 		distance: '10px',
