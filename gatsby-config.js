@@ -39,12 +39,6 @@ module.exports = {
 				icon: `src/images/gatsby-icon.png`
 			}
 		},
-		`gatsby-plugin-gatsby-cloud`,
-		{
-			resolve: `gatsby-plugin-google-fonts`,
-			options: {
-				fonts: ['Inter']
-			}
-		}
+		`gatsby-plugin-gatsby-cloud`
 	]
 };
