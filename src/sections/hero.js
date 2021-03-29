@@ -17,9 +17,7 @@ const Wrapper = styled(Flex)`
 const Brief = styled.div`
 	& p {
 		text-align: center;
-		font-size: 40px;
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.lg, fontSize.xxl)};
-		line-height: 2em;
 		margin: 0 0 100px;
 		font-weight: 600;
 	}
