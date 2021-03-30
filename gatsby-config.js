@@ -1,8 +1,13 @@
+const config = require('./src/config');
+
+const { siteTitle: title, siteDescription: description, author, image } = config;
+
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`
+		title,
+		description,
+		author,
+		image
 	},
 	flags: {
 		DEV_SSR: false
@@ -30,15 +35,25 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `Mohammed Esafi — ✌️Software Engineer`,
+				short_name: `Mohammed Esafi`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
-				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`
+				background_color: `#0b0c0d`,
+				theme_color: `#fcb97d`,
+				display: `standalone`,
+				icon: `src/images/icon.png`,
+				icon_options: {
+					purpose: `maskable`
+				}
 			}
 		},
-		`gatsby-plugin-gatsby-cloud`
+		`gatsby-plugin-gatsby-cloud`,
+		`gatsby-plugin-offline`,
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: ['GA-TRACKING_ID', 'G-8E03D9EQQX']
+			}
+		}
 	]
 };

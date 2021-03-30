@@ -60,7 +60,7 @@ const Menu = ({ menuOpen }) => (
 		<List as='ul' menuOpen={menuOpen} length={navLinks.length}>
 			{navLinks?.map(({ name, url }, index) => (
 				<Item as='li' key={index} menuOpen={menuOpen}>
-					<Link href={url}>
+					<Link aria-label={name} href={url}>
 						<Title text={name} />
 					</Link>
 				</Item>

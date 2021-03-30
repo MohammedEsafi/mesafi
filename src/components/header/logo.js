@@ -38,7 +38,7 @@ const Content = styled.span`
 `;
 
 const Brand = () => (
-	<Wrapper to='/'>
+	<Wrapper to='/' aria-label='home'>
 		<Content />
 	</Wrapper>
 );

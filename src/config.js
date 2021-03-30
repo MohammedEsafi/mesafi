@@ -1,6 +1,14 @@
 module.exports = {
+	siteTitle: 'Mohammed Esafi — ✌️Software Engineer',
+	siteDescription:
+		'Mohammed Esafi is a software engineer based in Morocco, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
+	siteUrl: 'https://mesafi.com',
+	siteLanguage: 'en',
+	name: 'Mohammed Esafi',
+	author: '@MohammedEsafi',
 	defaultTheme: 'dark',
 	email: 'hello@mesafi.com',
+	image: '/og.png', // path to your image, placed in the 'static' folder
 	navLinks: [
 		{
 			name: 'About',
@@ -53,7 +61,7 @@ module.exports = {
 		xxl: 38 / 16
 	},
 	easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-	srConfig: ({ origin = 'bottom', delay = 200, viewFactor = 0.25 }) => ({
+	srConfig: ({ origin = 'bottom', delay = 200, viewFactor = 0.25 } = {}) => ({
 		origin,
 		distance: '10px',
 		duration: 500,

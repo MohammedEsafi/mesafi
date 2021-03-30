@@ -73,7 +73,7 @@ const Footer = () => {
 		<Wrapper as='footer' justifyContent='space-between'>
 			<p>
 				Designed & Built by
-				<a href='https://github.com/MohammedEsafi'>
+				<a href='https://github.com/MohammedEsafi' rel='noopener noreferrer' target='_blank'>
 					<span> Mohammed Esafi </span>
 					<Icons name='link' />
 				</a>
@@ -81,7 +81,7 @@ const Footer = () => {
 			<List>
 				{socialLinks?.map(({ name, url }, index) => (
 					<li key={index}>
-						<a href={url}>
+						<a href={url} aria-label={name} rel='noopener noreferrer' target='_blank'>
 							<Icons name={name} fill={theme.onBackground} />
 						</a>
 					</li>

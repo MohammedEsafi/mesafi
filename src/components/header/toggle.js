@@ -35,7 +35,7 @@ const Content = styled.div`
 `;
 
 const Toggle = ({ toggleMode }) => (
-	<Wrapper onClick={toggleMode} type='button'>
+	<Wrapper onClick={toggleMode} type='button' aria-label='dark mode switcher'>
 		<Content />
 	</Wrapper>
 );
