@@ -20,6 +20,7 @@ const Wrapper = styled(Flex)`
 	transition-duration: 500ms;
 	transition-timing-function: ${easing};
 	z-index: 100;
+	position: absolute;
 
 	${media.tablet`
 		${(props) =>
