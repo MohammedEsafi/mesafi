@@ -4,14 +4,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex, Button } from '@styles';
 import { clamping } from '@utils';
-import { breakpoints, padding, fontSize, srConfig } from '@config';
+import { breakpoints, fontSize, srConfig } from '@config';
 import sr from '@utils/sr';
 
 const Wrapper = styled(Flex)`
 	height: calc(100vh - var(--nav-height));
-	max-width: var(--max-width);
-	margin: auto;
-	padding: 20px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 `;
 
 const Brief = styled.div`
