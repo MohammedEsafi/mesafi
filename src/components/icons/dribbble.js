@@ -15,12 +15,12 @@ const Dribbble = ({ fill }) => (
 	</svg>
 );
 
-Dribbble.propTypes = {
-	fill: PropTypes.string
-};
-
 Dribbble.defaultProps = {
 	fill: 'currentColor'
+};
+
+Dribbble.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Dribbble;

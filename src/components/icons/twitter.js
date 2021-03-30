@@ -7,12 +7,12 @@ const Twitter = ({ fill }) => (
 	</svg>
 );
 
-Twitter.propTypes = {
-	fill: PropTypes.string
-};
-
 Twitter.defaultProps = {
 	fill: 'currentColor'
+};
+
+Twitter.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Twitter;
