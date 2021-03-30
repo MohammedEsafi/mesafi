@@ -6,6 +6,8 @@ import { GlobalStyle, Theme, Flex } from '@styles';
 import { Header, Footer } from '@components';
 import { SEO } from '@components/layout';
 import { useMode } from '@hooks';
+import { breakpoints, padding, siteLanguage } from '@config';
+import { clamping } from '@utils';
 
 if (typeof window !== 'undefined') {
 	// eslint-disable-next-line global-require
@@ -14,9 +16,12 @@ if (typeof window !== 'undefined') {
 
 const Main = styled.main`
 	width: 100%;
+	max-width: var(--max-width);
+	padding: 0 ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
+	margin-top: 100px;
 `;
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, title, noFooter }) => {
 	const [mounted, setMounted] = useState(false);
 	const [mode, toggleMode] = useMode();
 	const { darkTheme, lightTheme } = Theme;
@@ -53,7 +58,7 @@ const Layout = ({ children, location }) => {
 		mounted && (
 			<>
 				<ThemeProvider theme={themeMode}>
-					<SEO title='Home' />
+					<SEO title={title} lang={siteLanguage} />
 					<GlobalStyle />
 					<Flex flexDirection='column' width='100%' alignItems='center'>
 						<Header toggleMode={toggleMode} />
@@ -62,7 +67,7 @@ const Layout = ({ children, location }) => {
 								{children}
 							</Flex>
 						</Main>
-						<Footer />
+						{!noFooter && <Footer />}
 					</Flex>
 				</ThemeProvider>
 			</>
@@ -70,9 +75,16 @@ const Layout = ({ children, location }) => {
 	);
 };
 
+Layout.defaultProps = {
+	title: '',
+	noFooter: false
+};
+
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
-	location: PropTypes.object.isRequired
+	location: PropTypes.object.isRequired,
+	title: PropTypes.string,
+	noFooter: PropTypes.bool
 };
 
 export default Layout;
