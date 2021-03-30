@@ -4,13 +4,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex } from '@styles';
 import { clamping } from '@utils';
-import { breakpoints, padding, fontSize } from '@config';
+import { breakpoints, fontSize } from '@config';
 import { Title } from '@components';
 
 const Wrapper = styled(Flex)`
-	max-width: var(--max-width);
-	margin: auto;
-	padding: 50px ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
+	padding: 50px 0;
 
 	& > div > ul {
 		display: grid;
