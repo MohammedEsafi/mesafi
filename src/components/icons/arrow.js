@@ -7,12 +7,12 @@ const Arrow = ({ fill }) => (
 	</svg>
 );
 
-Arrow.propTypes = {
-	fill: PropTypes.string
-};
-
 Arrow.defaultProps = {
 	fill: 'currentColor'
+};
+
+Arrow.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Arrow;

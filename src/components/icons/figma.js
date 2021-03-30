@@ -12,12 +12,12 @@ const Figma = ({ fill }) => (
 	</svg>
 );
 
-Figma.propTypes = {
-	fill: PropTypes.string
-};
-
 Figma.defaultProps = {
 	fill: 'currentColor'
+};
+
+Figma.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Figma;

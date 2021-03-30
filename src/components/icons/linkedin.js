@@ -7,12 +7,12 @@ const Linkedin = ({ fill }) => (
 	</svg>
 );
 
-Linkedin.propTypes = {
-	fill: PropTypes.string
-};
-
 Linkedin.defaultProps = {
 	fill: 'currentColor'
+};
+
+Linkedin.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Linkedin;

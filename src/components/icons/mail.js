@@ -10,12 +10,12 @@ const Mail = ({ fill }) => (
 	</svg>
 );
 
-Mail.propTypes = {
-	fill: PropTypes.string
-};
-
 Mail.defaultProps = {
 	fill: 'currentColor'
+};
+
+Mail.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Mail;

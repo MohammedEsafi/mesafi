@@ -8,12 +8,12 @@ const Link = ({ fill }) => (
 	</svg>
 );
 
-Link.propTypes = {
-	fill: PropTypes.string
-};
-
 Link.defaultProps = {
 	fill: 'currentColor'
+};
+
+Link.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Link;

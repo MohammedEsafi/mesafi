@@ -8,12 +8,12 @@ const Github = ({ fill }) => (
 	</svg>
 );
 
-Github.propTypes = {
-	fill: PropTypes.string
-};
-
 Github.defaultProps = {
 	fill: 'currentColor'
+};
+
+Github.propTypes = {
+	fill: PropTypes.string
 };
 
 export default Github;
