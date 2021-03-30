@@ -65,7 +65,7 @@ const Line = styled.span`
 `;
 
 const Hamburger = ({ menuOpen, toggleMenu }) => (
-	<Wrapper type='button' onClick={toggleMenu}>
+	<Wrapper type='button' onClick={toggleMenu} aria-label='menu toggle'>
 		<Padding>
 			{[...new Array(3)].map((_, index) => (
 				<Line key={index} menuOpen={menuOpen} />

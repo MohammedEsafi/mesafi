@@ -5890,6 +5890,20 @@ gatsby-core-utils@^2.0.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
+gatsby-core-utils@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.1.0.tgz#634989bc3cde1c7add752fbdc3c6a3cdd8e23377"
+  integrity sha512-zBNZ4kypfgqrUWNGMQQCXZookssXWaTnLWmxM7TOz5Phjvr0NvQo/xpkUgVbuylkQDwprmg88oRdox8L3zMY9Q==
+  dependencies:
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    file-type "^16.2.0"
+    fs-extra "^8.1.0"
+    node-object-hash "^2.0.0"
+    proper-lockfile "^4.1.1"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-graphiql-explorer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-1.0.0.tgz"
@@ -5938,6 +5952,14 @@ gatsby-plugin-gatsby-cloud@^2.0.0:
     lodash "^4.17.20"
     webpack-assets-manifest "^5.0.1"
 
+gatsby-plugin-google-gtag@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.1.0.tgz#ab564a1ae4e6a0e106d5ff4b0c33c17130122ac9"
+  integrity sha512-iGxvZXXTEf4a4X5WF9xqHdc9HJFQkwLCl/Kxthxc/C8J0IpGfPrEfbIyzQtHEXyt93X3OBSyadbsU7tkQMJseg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    minimatch "^3.0.4"
+
 gatsby-plugin-image@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-1.0.0.tgz"
@@ -5955,28 +5977,28 @@ gatsby-plugin-image@^1.0.0:
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.0.0.tgz"
-  integrity sha512-xmnppsXR0+CTQZhEmvcrbbV6rvOgO5ybE6Ywwv0bosSJxML3oBoo+kC8HCwK097Ppofgd1inSwNbJ5FB8wdNbQ==
+gatsby-plugin-manifest@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.1.0.tgz#9a40e2c7355663ea0863b199e7ba92af2f655e8d"
+  integrity sha512-T3vmSdld5KdKhov1/GFgBZ1fgFdyS1Uw2ehtJy3qTqknO3TLq2AiyMTJVRE5Z6ztYWLkE5Lnc07HZSYSb0ocsA==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    gatsby-core-utils "^2.0.0"
-    gatsby-plugin-utils "^1.0.0"
+    gatsby-core-utils "^2.1.0"
+    gatsby-plugin-utils "^1.1.0"
     semver "^7.3.2"
     sharp "^0.27.0"
 
-gatsby-plugin-offline@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/gatsby-plugin-offline/-/gatsby-plugin-offline-4.0.0.tgz"
-  integrity sha512-aAc33ocF84Qqlz9AvqcrDA0hkwF76ZbwHoST3jLpDU6ZOoVMy3eMTNVv/4baF9pBlhRZX0RzE46yzvE+bti0ew==
+gatsby-plugin-offline@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-4.1.0.tgz#92858f5a61077d9e44fa9e933b6a1ceff793b044"
+  integrity sha512-lLIooOgZBV91GjqNglIup72wXufEkVyLUDyoHzs7yxAuj1nGUEinWNpp+QLHH9SxI9salyuawzL52GSHTwQlDw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     cheerio "^1.0.0-rc.3"
-    gatsby-core-utils "^2.0.0"
+    gatsby-core-utils "^2.1.0"
     glob "^7.1.6"
     idb-keyval "^3.2.0"
-    lodash "^4.17.20"
+    lodash "^4.17.21"
     workbox-build "^4.3.1"
 
 gatsby-plugin-page-creator@^3.0.0:
@@ -6050,6 +6072,13 @@ gatsby-plugin-utils@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-utils/-/gatsby-plugin-utils-1.0.0.tgz"
   integrity sha512-Z7Yi/y03aObiQ8kkMQGpE5lkIN7GKLfXSDlmriuzU0g7XPUUBwuWQPFVG/hSb4f30KWJ1icBe+Ropivu17rURw==
+  dependencies:
+    joi "^17.2.1"
+
+gatsby-plugin-utils@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.1.0.tgz#b73f3f196323df3c75e6edb345d221f003b5c152"
+  integrity sha512-B21V3tFskfZcVSJVaYy6rLrxHcumbcmhKAYKniKThxCP/0KSqHkfC9+Bopsonk8npRKbVX924OI3UOCKfbgFsg==
   dependencies:
     joi "^17.2.1"
 
@@ -8500,7 +8529,7 @@ lodash.without@^4.4.0:
   resolved "https://registry.npmjs.org/lodash.without/-/lodash.without-4.4.0.tgz"
   integrity sha1-PNRXSgC2e643OpS3SHcmQFB7eqw=
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

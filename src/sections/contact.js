@@ -4,19 +4,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex } from '@styles';
 import { clamping } from '@utils';
-import { breakpoints, padding, fontSize, email } from '@config';
+import { breakpoints, fontSize, email } from '@config';
 import Icons from '@components/icons';
 
 const Wrapper = styled(Flex)`
-	position: relative;
 	padding: 200px 0;
-`;
-
-const Content = styled(Flex)`
-	width: 100%;
-	max-width: var(--max-width);
-	margin: auto;
-	padding: 0 ${clamping(breakpoints.phone, breakpoints.desktop, padding.min, padding.max)};
 	font-size: ${clamping(breakpoints.phone, breakpoints.desktop, fontSize.md, fontSize.xl)};
 
 	& p {
@@ -43,15 +35,13 @@ const Contact = () => {
 	`);
 
 	return (
-		<Wrapper id='contact' as='section'>
-			<Content flexDirection='column' justifyContent='center'>
-				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-				<p>
-					<a href={`mailto:${email}`}>
-						<span>{email}</span> <Icons name='link' />
-					</a>
-				</p>
-			</Content>
+		<Wrapper id='contact' as='section' flexDirection='column' justifyContent='center'>
+			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+			<p>
+				<a href={`mailto:${email}`} rel='noopener noreferrer' target='_blank'>
+					<span>{email}</span> <Icons name='link' />
+				</a>
+			</p>
 		</Wrapper>
 	);
 };
