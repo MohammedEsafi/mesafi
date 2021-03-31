@@ -43,7 +43,7 @@ module.exports = {
 				display: `standalone`,
 				icon: `src/images/icon.png`,
 				icon_options: {
-					purpose: `maskable`
+					purpose: `maskable any`
 				}
 			}
 		},
