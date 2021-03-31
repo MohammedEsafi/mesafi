@@ -8,7 +8,8 @@ import { clamping } from '@utils';
 import { breakpoints } from '@config';
 
 const Content = styled(Flex)`
-	height: calc(100vh - var(--nav-height));
+	min-height: calc(100vh - var(--nav-height));
+	padding: 50px 0;
 
 	& > h1 {
 		font-size: ${clamping(breakpoints.phone, breakpoints.desktop, 9, 15)};
