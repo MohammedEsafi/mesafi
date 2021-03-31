@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import { Flex, Button } from '@styles';
 import { clamping } from '@utils';
@@ -9,6 +9,12 @@ import sr from '@utils/sr';
 
 const Wrapper = styled(Flex)`
 	height: calc(100vh - var(--nav-height));
+
+	& a {
+		color: currentColor;
+		padding: 24px 52px;
+		display: block;
+	}
 `;
 
 const Brief = styled.div`
@@ -47,7 +53,11 @@ const Hero = () => {
 			<Brief ref={briefRef}>
 				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			</Brief>
-			<Button ref={buttonRef}>connect with me</Button>
+			<Button ref={buttonRef}>
+				<Link aria-label='contact' href='#contact'>
+					connect with me
+				</Link>
+			</Button>
 		</Wrapper>
 	);
 };
