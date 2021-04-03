@@ -1,5 +1,5 @@
 module.exports = {
-	siteTitle: 'Mohammed Esafi — ✌️Software Engineer',
+	siteTitle: 'Hi I\'m Mohammed 👋',
 	siteDescription:
 		'Mohammed Esafi is a software engineer based in Morocco, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
 	siteUrl: 'https://mesafi.com',
