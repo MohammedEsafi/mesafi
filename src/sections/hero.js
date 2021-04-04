@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex, Button } from '@styles';
 import { clamping } from '@utils';
@@ -54,9 +54,9 @@ const Hero = () => {
 				<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 			</Brief>
 			<Button ref={buttonRef}>
-				<Link aria-label='contact' href='#contact'>
+				<a aria-label='contact' href='#contact'>
 					connect with me
-				</Link>
+				</a>
 			</Button>
 		</Wrapper>
 	);
