@@ -8,7 +8,7 @@ module.exports = {
 	author: '@MohammedEsafi',
 	defaultTheme: 'dark',
 	email: 'hello@mesafi.com',
-	image: '/og.png', // path to your image, placed in the 'static' folder
+	image: '/og.png', // open graph image
 	navLinks: [
 		{
 			name: 'About',
