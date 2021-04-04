@@ -16,7 +16,7 @@ module.exports = {
 		},
 		{
 			name: 'Work',
-			url: '/#work'
+			url: 'https://github.com/MohammedEsafi'
 		},
 		{
 			name: 'Contact',
