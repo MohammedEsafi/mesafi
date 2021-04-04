@@ -45,14 +45,14 @@ const Item = styled(Flex)`
 	transition-duration: 200ms;
 	transition-timing-function: ${easing};
 
+	& > a {
+		color: ${({ theme }) => theme.text.primary};
+		padding: 20px 30px;
+	}
+
 	${media.tablet`
 		visibility: ${({ menuOpen }) => (menuOpen ? 'visible' : 'hidden')};
 	`};
-`;
-
-const Link = styled.a`
-	color: ${({ theme }) => theme.text.primary};
-	padding: 20px 30px;
 `;
 
 const Menu = ({ menuOpen }) => (
@@ -60,9 +60,9 @@ const Menu = ({ menuOpen }) => (
 		<List as='ul' menuOpen={menuOpen} length={navLinks.length}>
 			{navLinks?.map(({ name, url }, index) => (
 				<Item as='li' key={index} menuOpen={menuOpen}>
-					<Link aria-label={name} href={url}>
+					<a aria-label={name} href={url}>
 						<Title text={name} />
-					</Link>
+					</a>
 				</Item>
 			))}
 		</List>
