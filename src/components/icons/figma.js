@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Figma = ({ fill }) => (
-	<svg width={98} height={98} viewBox='0 0 98 98' fill='none' xmlns='http://www.w3.org/2000/svg'>
+	<svg viewBox='0 0 98 98' fill='none' xmlns='http://www.w3.org/2000/svg'>
 		<path
 			fillRule='evenodd'
 			clipRule='evenodd'
