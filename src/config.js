@@ -1,5 +1,5 @@
 module.exports = {
-	siteTitle: 'Hi I\'m Mohammed 👋',
+	siteTitle: `Hi I'm Mohammed 👋`,
 	siteDescription:
 		'Mohammed Esafi is a software engineer based in Morocco, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
 	siteUrl: 'https://mesafi.com',
@@ -33,8 +33,8 @@ module.exports = {
 			url: 'https://dribbble.com/MohammedEsafi'
 		},
 		{
-			name: 'Linkedin',
-			url: 'https://www.linkedin.com/in/MohammedEsafi'
+			name: 'Figma',
+			url: 'https://www.figma.com/@MohammedEsafi'
 		},
 		{
 			name: 'Twitter',
