@@ -74,7 +74,7 @@ const Header = ({ toggleMode }) => {
 			<Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
 			<Logo />
 			<Flex alignItems='center'>
-				<Menu menuOpen={menuOpen} />
+				<Menu menuOpen={menuOpen} toggleMenu={toggleMenu} />
 				<Toggle toggleMode={toggleMode} />
 			</Flex>
 		</Wrapper>
