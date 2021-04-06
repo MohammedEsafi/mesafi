@@ -55,12 +55,12 @@ const Item = styled(Flex)`
 	`};
 `;
 
-const Menu = ({ menuOpen }) => (
+const Menu = ({ menuOpen, toggleMenu }) => (
 	<Flex as='nav'>
 		<List as='ul' menuOpen={menuOpen} length={navLinks.length}>
 			{navLinks?.map(({ name, url }, index) => (
 				<Item as='li' key={index} menuOpen={menuOpen}>
-					<a aria-label={name} href={url}>
+					<a aria-label={name} href={url} onClick={toggleMenu}>
 						<Title text={name} />
 					</a>
 				</Item>
@@ -70,7 +70,8 @@ const Menu = ({ menuOpen }) => (
 );
 
 Menu.propTypes = {
-	menuOpen: PropTypes.bool.isRequired
+	menuOpen: PropTypes.bool.isRequired,
+	toggleMenu: PropTypes.func.isRequired
 };
 
 export default Menu;
