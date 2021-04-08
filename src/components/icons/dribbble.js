@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Dribbble = ({ fill }) => (
-	<svg viewBox='0 0 97.75 97.75' fill={fill} xmlns='http://www.w3.org/2000/svg' role='img' className='svg__SVG-icpz5m-0 bCACph'>
+	<svg viewBox='0 0 97.75 97.75' fill={fill} xmlns='http://www.w3.org/2000/svg' role='img'>
 		<g>
 			<path d='M46.927,38.775C42.032,30.117,36.8,22.816,35.746,21.367c-8.416,4.016-14.719,11.764-16.74,21.088 c0.084,0,0.184,0,0.299,0C22.121,42.455,33.789,42.229,46.927,38.775z' />
 			<path d='M69.01,25.984C63.628,21.266,56.582,18.4,48.875,18.4c-2.37,0-4.676,0.273-6.893,0.789 c1.242,1.678,6.471,8.9,11.243,17.631C63.539,32.92,68.159,27.148,69.01,25.984z' />
