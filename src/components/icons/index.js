@@ -6,4 +6,5 @@ export { default as Figma } from './figma';
 export { default as Link } from './link';
 export { default as Github } from './github';
 export { default as Linkedin } from './linkedin';
+export { default as Codepen } from './codepen';
 export { default } from './icons';
