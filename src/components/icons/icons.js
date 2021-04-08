@@ -1,7 +1,7 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
 
-import { Mail, Arrow, Twitter, Dribbble, Figma, Link, Github, Linkedin } from '@components/icons';
+import { Mail, Arrow, Twitter, Dribbble, Figma, Link, Github, Linkedin, Codepen } from '@components/icons';
 
 const Icons = ({ name, ...props }) => {
 	switch (name.toLowerCase()) {
@@ -21,6 +21,8 @@ const Icons = ({ name, ...props }) => {
 			return <Github {...props} />;
 		case 'linkedin':
 			return <Linkedin {...props} />;
+		case 'codepen':
+			return <Codepen {...props} />;
 		default:
 			throw new Error('Icon not found!');
 	}
