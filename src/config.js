@@ -29,8 +29,8 @@ module.exports = {
 			url: 'https://github.com/MohammedEsafi'
 		},
 		{
-			name: 'Dribbble',
-			url: 'https://dribbble.com/MohammedEsafi'
+			name: 'Codepen',
+			url: 'https://codepen.io/MohammedEsafi'
 		},
 		{
 			name: 'Figma',
