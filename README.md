@@ -5,7 +5,7 @@
 	Mohammed Esafi
 </h1>
 <p align="center">
-	The second iteration of <a href="http://mesafi.com/" target="_blank">mesafi.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+	The second iteration of <a href="http://mesafi.com/" target="_blank">mesafi.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
 ![Lighthouse score](./src/images/lighthouse_score.jpg)
