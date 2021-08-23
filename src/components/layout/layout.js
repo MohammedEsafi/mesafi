@@ -47,7 +47,7 @@ const Layout = ({ children, location, title, noFooter }) => {
 
 		console.log(`© ${year}. All rights are reserved — Made with 🖤 by %cMohammed Esafi`, 'font-style: italic');
 
-		console.log('This website was coded using Gatsby, React, GraphQL, Styled Components and hosted on Netlify');
+		console.log('This website was coded using Gatsby, React, GraphQL, Styled Components and hosted on Vercel');
 
 		console.log('Open sourced on: https://github.com/MohammedEsafi/mesafi');
 
