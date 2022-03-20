@@ -31,48 +31,52 @@ function SEO({ description, lang, meta, title }) {
 			title={title || defaultTitle}
 			meta={[
 				{
-					name: `description`,
+					name: 'description',
 					content: metaDescription
 				},
 				{
-					name: `image`,
+					name: 'image',
 					content: defaultImage
 				},
 				{
-					property: `og:title`,
+					property: 'og:title',
 					content: title
 				},
 				{
-					property: `og:description`,
+					property: 'og:description',
 					content: metaDescription
 				},
 				{
-					property: `og:image`,
+					property: 'og:image',
 					content: defaultImage
 				},
 				{
-					property: `og:type`,
-					content: `website`
+					property: 'og:type',
+					content: 'website'
 				},
 				{
-					name: `twitter:card`,
-					content: `summary`
+					name: 'twitter:card',
+					content: 'summary'
 				},
 				{
-					name: `twitter:creator`,
-					content: site.siteMetadata?.author || ``
+					name: 'twitter:creator',
+					content: site.siteMetadata?.author || ''
 				},
 				{
-					name: `twitter:title`,
+					name: 'twitter:title',
 					content: title
 				},
 				{
-					name: `twitter:description`,
+					name: 'twitter:description',
 					content: metaDescription
 				},
 				{
-					name: `twitter:image`,
+					name: 'twitter:image',
 					content: defaultImage
+				},
+				{
+					name: 'yandex-verification',
+					content: '19641e31bfdc3e06'
 				}
 			].concat(meta)}
 		/>
@@ -80,9 +84,9 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-	lang: `en`,
+	lang: 'en',
 	meta: [],
-	description: ``
+	description: ''
 };
 
 SEO.propTypes = {
